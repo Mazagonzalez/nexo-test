@@ -1,0 +1,25 @@
+---
+import ExploreProduts from "@/assets/explore-products.astro";
+import ProtectedPurchase from "@/assets/protected-purchase.astro";
+import YouNeedHelp from "@/assets/you-need-help.astro";
+import OfficialStores from "@/assets/official-stores.astro";
+
+const data = [
+    { title: "Más vendidos", description: "Explora los productos que son tendencia.", icon: ExploreProduts },
+    { title: "Compra protegida", description: "Puedes devolver tu compra gratis.", icon: ProtectedPurchase },
+    { title: "Tiendas oficiales", description: "Encuentra tus marcas preferidas.", icon: OfficialStores },
+    { title: "¿Necesitas ayuda?", description: "Resuelve tus dudas sobre compras o ventas.", icon: YouNeedHelp }
+]
+---
+
+<section class="row gap-3 justify-center">
+    {data.map(({ title, description, icon: Icon }) => (
+        <div class="w-[185px] h-[285px] p-4 rounded-xl border border-gray-200 text-center col gap-3">
+            <h2 class="text-start font-semibold">{title}</h2>
+            <div class="mx-auto mt-auto">
+                <Icon />
+            </div>
+            <p class="text-center text-sm mb-auto">{description}</p>
+        </div>
+    ))}
+</section>
