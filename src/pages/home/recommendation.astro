@@ -1,0 +1,42 @@
+---
+import { fetchProducts } from '@/api/api.ts';
+
+const { data: products, error } = await fetchProducts();
+
+function quotas(price: number) {
+  return parseFloat((price / 3).toFixed(2));
+}
+---
+
+<section class="size-screen py-[50px]">
+  <div class="bg-white rounded-xl border border-gray-200 p-6 shadow-md">
+    <h1 class="mb-8 text-xl font-semibold">Productos recomendados</h1>
+
+    {error ? (
+      <div class="text-red-500 bg-red-100 p-3 rounded">
+        Error: {error}
+      </div>
+    ) : (
+      <div class="grid grid-cols-5 gap-4">
+        {products?.map((item) => (
+          <div class="col gap-4"> 
+            <div class="w-full h-[150px] bg-gray-300 rounded"></div>
+
+            <h2 class="text-lg font-medium">
+              {item.name}
+            </h2>
+
+            <span class="text-2xl block">
+              $ {item.price}
+            </span>
+
+            <div class="col">
+              <span>en 3 cuotas de $ {quotas(item.price)}</span>
+              <span class="block text-sm text-gray-500">con 0% de interés</span>
+            </div>
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>

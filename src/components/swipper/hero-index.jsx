@@ -32,7 +32,7 @@ export default () => {
         {images.map((item, index) => (
             <SwiperSlide key={index}>
                 <div className='relative'>
-                    <div className='absolute size-full top-0 right-0 bg-gradient-to-t from-white via-transparent to-transparent z-10'></div>
+                    <div className='absolute size-full top-0 right-0 bg-gradient-to-t from-[#ebebeb] via-transparent to-transparent z-10'></div>
                     <img 
                         src={item.src} 
                         alt={`Slide ${index}`} 

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'proxima-nova-extra-bold';
+    src: url('/fonts/proximanova_extrabold.otf') format('opentype');
+    font-weight: 900; /* extra bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-bold';
+    src: url('/fonts/proximanova_bold.otf') format('opentype');
+    font-weight: 700; /* bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-medium';
+    src: url('/fonts/proximanova_boldit.otf') format('opentype');
+    font-weight: 500; /* medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-regular';
+    src: url('/fonts/proximanova_regular.ttf') format('opentype');
+    font-weight: 400; /* regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima-nova-light';
+    src: url('/fonts/proximanova_light.otf') format('opentype');
+    font-weight: 300; /* light */
+    font-style: normal;
+}
+
+*{
+    font-family: 'proxima-nova-regular', sans-serif;
+}
+
+.font-extrabold {
+    font-family: 'proxima-nova-extra-bold', sans-serif;
+}
+
+.font-bold {
+    font-family: 'proxima-nova-bold', sans-serif;
+}
+
+.font-semibold {
+    font-family: 'proxima-nova-semi-bold', sans-serif;
+}
+
+.font-medium {
+    font-family: 'proxima-nova-medium', sans-serif;
+} 
+
+.font-regular {
+    font-family: 'proxima-nova-regular', sans-serif;
+} 
+
+.font-light {
+    font-family: 'proxima-nova-light', sans-serif;
+}
